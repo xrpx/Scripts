@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 
-# Author:        xrpx
-# Description:   Simple python script to check on Bitcoin value at the moment
-# Last modified: May 3 2014
+# Author:        	xrpx
+# Description:   	Simple python script to check on Bitcoin value at the moment
+# Last modified: 	May 3, 2014
 
 import urllib2
 import json

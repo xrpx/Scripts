@@ -1,31 +1,6 @@
-# Original content available at: https://github.com/cfengine/copbl/tree/master/STIGs
-# Modifications to RHEL5 version for application to RHEL6
-# Author: XRPX (https://github.com/xrpx/sec)
-
-################################################################################
-#     
-#                             _    _    _    _  
-#                            / \  / \  / \  / \ 
-#                           ( S )( T )( I )( G )
-#  	                     \_/  \_/  \_/  \_/ 
-#
-#                    Security Technical Implementation Guides 
-#
-#                            OS SRG UNIX Version
-#                            Version 1 Release 1
-#			
-#
-#  Copyright (C) CFEngine AS
-#
-#  You are licensed to modify this code for your own private purposes.
-#  No derivative of this work may be shared with any third party without
-#  the permission of the Cfengine company.
-#
-# This community file comes with no warranty of fitness for any purpose. 
-#
-#  $Id:$
-#
-################################################################################
+# Author: 		xrpx
+# Description: 		CFEngine policy to implement DISA STIG controls on RHEL 5
+# Last Modified: 	November 22, 2013
 
 body common control
 {
@@ -33,10 +8,6 @@ body common control
  inputs => { "/var/cfengine/inputs/cfengine_stdlib.cf" };
  host_licenses_paid => "1";	
 }
-
-#
-# STIGs compliance with Cfengine 3 (Nova)
-#
 
 bundle agent STIGs
 {
@@ -1524,8 +1495,7 @@ bundle edit_line maintain_grub
       handle => "maintain_grub_delete_lines_lnx00140";
 
  insert_lines:
-  # default password is cfengine
-  "password --md5 $(const.dollar)1$(const.dollar)8fI020$(const.dollar)YPs7MCo3A1ZkS7xagjYnb0" -> { "LNX00140" }
+  "password --md5 $(const.dollar)1$(const.dollar)8xxxx0$(const.dollar)Yxxxxxxxxxxxx0" -> { "LNX00140" }
      comment => "Use an MD5 encrypted password to GRUB",
       handle => "maintain_grub_insert_lines_lnx00140",
      location => before("^title.*");
